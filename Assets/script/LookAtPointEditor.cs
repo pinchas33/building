@@ -10,9 +10,9 @@ public class LookAtPointEditor : Editor
     {
         var t = (target as LookAtPoint);
 
-        t.changeValue( t.numVertices, t.firstNumVertices);
+        t.UpdateArraySize( t.numVertices, t.firstNumVertices);
 
-        t.pointDefinition(); // create a center point
+        t.PointDefinition(); // create a center point
 
         for (int i = 0; i < t.numVertices; i++) // create handles
         {
@@ -33,12 +33,11 @@ public class LookAtPointEditor : Editor
         {
             for (int i = 0; i < t.numVertices; i++) // equale up and down
             {
-                t.highPoints[i] = t.BottomPoints[i] + new Vector3(0, t.hight, 0);
+                t.highPoints[i] = t.BottomPoints[i] + new Vector3(0, t.height, 0);
             }
 
         }
-
-        t.getMesh1();
+        t.GetMesh();
 
         for (int i = 0; i < t.numVertices - 1; i++) //  create walls
         {
