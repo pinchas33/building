@@ -88,15 +88,14 @@ public class LookAtPoint : MonoBehaviour
         {
             uvs[i] = new Vector2(vertices[i].x, vertices[i].y);
 
-            //have a problem in case that values that verices.x bettwn a wall equals.
-            if (Math.Abs(Math.Abs(vertices[i].x) - Math.Abs(vertices[i + 1].x)) >= (Math.Abs(Math.Abs(vertices[i].z) - Math.Abs(vertices[i + 1].z))))
+            if (Math.Abs(Math.Abs(vertices[i].x) -Math.Abs(vertices[i].x) + Math.Abs(vertices[i + 1].x) - Math.Abs(vertices[i].x)) >= (Math.Abs(Math.Abs(vertices[i].z) -Math.Abs(vertices[i].z) + Math.Abs(vertices[i + 1].z - Math.Abs(vertices[i].z)))))
             {
                 uvs[i] = new Vector2(vertices[i].x, vertices[i].y);
                 uvs[i +1] = new Vector2(vertices[i+1].x, vertices[i+1].y);
                 uvs[i +2] = new Vector2(vertices[i +2].x, vertices[i+2].y);
 
             }
-            else if (Math.Abs(Math.Abs(vertices[i].x) - Math.Abs(vertices[i + 1].x)) <= (Math.Abs(Math.Abs(vertices[i].z) - Math.Abs(vertices[i + 1].z))))
+            else if (Math.Abs(Math.Abs(vertices[i].x) -  Math.Abs(vertices[i + 1].x) + Math.Abs(vertices[i + 1].x) -  Math.Abs(vertices[i + 1].x)) <= (Math.Abs(Math.Abs(vertices[i].z) -Math.Abs(vertices[i].z) + Math.Abs(vertices[i + 1].z) - Math.Abs(vertices[i].z))))//|| vertices[i].x == vertices[i+1].x)
             {
                 uvs[i] = new Vector2(vertices[i].z, vertices[i].y);
                 uvs[i + 1] = new Vector2(vertices[i + 1].z, vertices[i + 1].y);

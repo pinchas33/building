@@ -16,18 +16,18 @@ public class LookAtPointEditor : Editor
 
         for (int i = 0; i < t.numVertices; i++) // create handles
         {
-            t.BottomPoints[i] = Handles.PositionHandle(t.BottomPoints[i], Quaternion.identity);
+              t.BottomPoints[i] =  t.transform.InverseTransformPoint( Handles.PositionHandle(t.transform.TransformPoint(t.BottomPoints[i]) , Quaternion.identity));
         }
 
 
-       // t.centerPoint =  Handles.PositionHandle(t.centerPoint, Quaternion.identity);
+        //Handles.SphereCap(0, t.centerPoint, Quaternion.identity, 2); 
 
 
-        for (int i = 0; i < t.numVertices -1; i++) // drow lines between hamdles
-        {
-            Handles.DrawLine(t.BottomPoints[i], t.BottomPoints[i +1]);
-        }
-        Handles.DrawLine(t.BottomPoints[0], t.BottomPoints[t.numVertices-1]);
+        // for (int i = 0; i < t.numVertices -1; i++) // drow lines between hamdles
+        // {
+        //     Handles.DrawLine(t.BottomPoints[i], t.BottomPoints[i +1]);
+        // }
+        // Handles.DrawLine(t.BottomPoints[0], t.BottomPoints[t.numVertices-1]);
 
         if (t.symmetry)
         {

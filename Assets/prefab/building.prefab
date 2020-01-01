@@ -92,23 +92,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28b50a6cd4076d74185c654272d644e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numVertices: 5
-  firstNumVertices: 5
-  heightOfTheCenterPointOfThRoof: 70
+  numVertices: 4
+  firstNumVertices: 4
+  heightOfTheCenterPointOfTheRoof: 70
   hight: 70
   BottomPoints:
-  - {x: -22.657387, y: 0, z: -21.070953}
-  - {x: -84.191696, y: 0, z: -7.0380554}
-  - {x: -59.563828, y: 0, z: 63.693718}
-  - {x: 8.800621, y: 0, z: 0}
-  - {x: 0, y: 0, z: -103.69305}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
   highPoints:
-  - {x: -22.657387, y: 70, z: -21.070953}
-  - {x: -84.191696, y: 70, z: -7.0380554}
-  - {x: -59.563828, y: 70, z: 63.693718}
-  - {x: 8.800621, y: 70, z: 0}
-  - {x: 0, y: 70, z: -103.69305}
-  centerPoint: {x: -52.4393, y: 70, z: 10.775906}
+  - {x: 0, y: 70, z: 0}
+  - {x: 0, y: 70, z: 0}
+  - {x: 0, y: 70, z: 0}
+  - {x: 0, y: 70, z: 0}
+  centerPoint: {x: 0, y: 70, z: 0}
   numOfVerticesOnRoof: 0
   symmetry: 1
   vertices: []
